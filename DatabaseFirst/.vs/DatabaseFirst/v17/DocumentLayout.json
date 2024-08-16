@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|c:\\users\\lenovo\\desktop\\new folder (3)\\.net-1508\\databasefirst\\databasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|solutionrelative:databasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,10 +19,29 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 374,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\DatabaseFirst\\appsettings.json",
+              "RelativeDocumentMoniker": "DatabaseFirst\\appsettings.json",
+              "ToolTip": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\DatabaseFirst\\appsettings.json",
+              "RelativeToolTip": "DatabaseFirst\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-16T12:30:00.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }
