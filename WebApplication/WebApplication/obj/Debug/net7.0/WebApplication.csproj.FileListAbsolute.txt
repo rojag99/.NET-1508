@@ -1,0 +1,8 @@
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lenovo\Desktop\New folder (3)\.NET-1508\WebApplication\WebApplication\obj\Debug\net7.0\WebApplication.sourcelink.json
