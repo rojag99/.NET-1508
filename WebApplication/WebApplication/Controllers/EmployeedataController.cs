@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication.Models;
 
 namespace WebApplication.Controllers
@@ -15,88 +16,147 @@ namespace WebApplication.Controllers
             this.dbContext = dbContext;
         }
 
-       
+
 
         [HttpGet]
-        public IActionResult GetAllEmployeesData()
+        public async Task<IActionResult> GetAllEmployeesData()
         {
-         var alldata=   dbContext.Employeedata.ToList();
-            return Ok(alldata);
-            
-
+            try
+            {
+                // Use ToListAsync to perform the operation asynchronously
+                var allData = await dbContext.Employeedata.ToListAsync();
+                return Ok(allData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
+
         // GET: api/employeedata/{id}
         [HttpGet("{id}")]
-        public IActionResult GetEmployeeData(Guid id)
+        public async Task<IActionResult> GetEmployeeData(Guid id)
         {
-            // Use LINQ to find the employee by id
-            var employee = dbContext.Employeedata
-                                    .Where(e => e.Id == id)
-                                    .FirstOrDefault();
-            if (employee == null)
+            try
             {
-                return NotFound();
+                // Use ToListAsync() for asynchronous operation
+                var employee = await dbContext.Employeedata
+                                               .Where(e => e.Id == id)
+                                               .FirstOrDefaultAsync();
+
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(employee);
             }
-            return Ok(employee);
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine($"An error occurred: {ex.Message}");
+
+               
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
+
+
         // POST: api/employeedata
         [HttpPost]
-        public IActionResult CreateEmployeeData([FromBody] Employeedata newEmployee)
+        public async Task<IActionResult> CreateEmployeeData([FromBody] Employeedata newEmployee)
         {
             if (newEmployee == null)
             {
-                return BadRequest();
+                return BadRequest("Employee data cannot be null.");
             }
 
-            newEmployee.Id = Guid.NewGuid(); // Ensure new ID
-            dbContext.Employeedata.Add(newEmployee);
-            dbContext.SaveChanges();
-
-            return CreatedAtAction(nameof(GetEmployeeData), new { id = newEmployee.Id }, newEmployee);
+            try
+            {
+                newEmployee.Id = Guid.NewGuid();
+                dbContext.Employeedata.Add(newEmployee);
+                await dbContext.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetEmployeeData), new { id = newEmployee.Id }, newEmployee);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
         // PUT: api/employeedata/{id}
         [HttpPut("{id}")]
-        public IActionResult UpdateEmployeeData(Guid id, [FromBody] Employeedata updatedEmployee)
+        public async Task<IActionResult> UpdateEmployeeData(Guid id, [FromBody] Employeedata updatedEmployee)
         {
             if (id != updatedEmployee.Id)
             {
-                return BadRequest();
+                return BadRequest("Employee ID mismatch.");
             }
 
-            // Use LINQ to find the employee by id
-            var existingEmployee = dbContext.Employeedata
-                                            .Where(e => e.Id == id)
-                                            .FirstOrDefault();
-            if (existingEmployee == null)
+            try
             {
-                return NotFound();
+                
+                var existingEmployee = await dbContext.Employeedata
+                                                       .Where(e => e.Id == id)
+                                                       .FirstOrDefaultAsync();
+
+                if (existingEmployee == null)
+                {
+                    return NotFound();
+                }
+
+                existingEmployee.Name = updatedEmployee.Name;
+                existingEmployee.email = updatedEmployee.email; 
+                dbContext.Employeedata.Update(existingEmployee);
+
+                await dbContext.SaveChangesAsync();
+
+                return NoContent();
             }
+            catch (Exception ex)
+            {
+               
+                Console.WriteLine($"An error occurred: {ex.Message}");
 
-            // Update the employee details
-            existingEmployee.Name = updatedEmployee.Name;
-            existingEmployee.email = updatedEmployee.email;
-
-            dbContext.Employeedata.Update(existingEmployee);
-            dbContext.SaveChanges();
-
-            return NoContent();
+               
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
+
+
+
+       
         [HttpDelete("{id}")]
-        public IActionResult DeleteEmployeeData(Guid id)
+        public async Task<IActionResult> DeleteEmployeeData(Guid id)
         {
-            // Use LINQ to find the employee by id
-            var employee = dbContext.Employeedata
-                                    .Where(e => e.Id == id)
-                                    .FirstOrDefault();
-            if (employee == null)
+            try
             {
-                return NotFound();
+                var employee = await dbContext.Employeedata
+                                               .Where(e => e.Id == id)
+                                               .FirstOrDefaultAsync();
+
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+
+                
+                dbContext.Employeedata.Remove(employee);
+
+                
+                await dbContext.SaveChangesAsync();
+
+                return NoContent();
             }
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine($"An error occurred: {ex.Message}");
 
-            dbContext.Employeedata.Remove(employee);
-            dbContext.SaveChanges();
-
-            return NoContent();
+                
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
     }
 }
