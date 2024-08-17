@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|c:\\users\\lenovo\\desktop\\new folder (3)\\.net-1508\\databasefirst\\databasefirst\\controllers\\employeemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|solutionrelative:databasefirst\\controllers\\employeemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|c:\\users\\lenovo\\desktop\\new folder (3)\\.net-1508\\databasefirst\\databasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{558BB875-AC50-403F-B19B-4CEE2350E530}|DatabaseFirst\\DatabaseFirst.csproj|solutionrelative:databasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -29,6 +33,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EmployeeManagementController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\DatabaseFirst\\Controllers\\EmployeeManagementController.cs",
+              "RelativeDocumentMoniker": "DatabaseFirst\\Controllers\\EmployeeManagementController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\DatabaseFirst\\Controllers\\EmployeeManagementController.cs",
+              "RelativeToolTip": "DatabaseFirst\\Controllers\\EmployeeManagementController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T11:08:04.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\lenovo\\Desktop\\New folder (3)\\.NET-1508\\DatabaseFirst\\DatabaseFirst\\appsettings.json",
               "RelativeDocumentMoniker": "DatabaseFirst\\appsettings.json",
